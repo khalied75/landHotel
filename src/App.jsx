@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ChangePassword from "./pages/ChangePassword";
-// Placeholder pages — fill these in later
-const Available = () => <main className="pt-24 text-center text-gray-600 text-2xl">Available Rooms — Coming Soon</main>;
-const Contact   = () => <main className="pt-24 text-center text-gray-600 text-2xl">Contact — Coming Soon</main>;
-const Rate      = () => <main className="pt-24 text-center text-gray-600 text-2xl">Rate Us — Coming Soon</main>;
- 
+import Rate from "./pages/Rate";
+
+const Available = () => <main className="pt-24 text-center text-2xl text-gray-600">Available Rooms - Coming Soon</main>;
+const Contact = () => <main className="pt-24 text-center text-2xl text-gray-600">Contact - Coming Soon</main>;
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -21,7 +21,6 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="change-password" element={<ChangePassword />} />
-
         </Route>
       </Routes>
     </BrowserRouter>
