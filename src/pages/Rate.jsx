@@ -21,7 +21,7 @@ const ratingLabels = {
 
 function StarRating({ value, onChange, size = "h-10 w-10", interactive = false }) {
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
       {[1, 2, 3, 4, 5].map((star) => {
         const active = star <= value;
 
@@ -217,63 +217,63 @@ export default function Rate() {
 
   return (
     <main className="bg-slate-50 pt-16 text-slate-900">
-      <section className="relative overflow-hidden px-6 py-24 text-center text-white">
+      <section className="relative overflow-hidden px-4 py-16 text-center text-white sm:px-6 sm:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.95),_transparent_35%),radial-gradient(circle_at_center,_rgba(147,51,234,0.85),_transparent_40%),linear-gradient(135deg,_#2563eb_0%,_#7c3aed_55%,_#c026d3_100%)]" />
         <div className="relative mx-auto max-w-4xl">
-          <h1 className="text-5xl font-extrabold tracking-tight md:text-7xl">Rate Your Experience</h1>
-          <p className="mt-6 text-xl text-white/90 md:text-3xl">Your feedback helps us serve you better</p>
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl">Rate Your Experience</h1>
+          <p className="mt-4 text-lg text-white/90 sm:mt-6 sm:text-xl md:text-3xl">Your feedback helps us serve you better</p>
         </div>
       </section>
 
-      <section className="-mt-2 px-6 py-14">
+      <section className="-mt-2 px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div className="rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+          <div className="rounded-3xl bg-white p-6 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-8">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 sm:h-16 sm:w-16">
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
                 <path d="m12 2.75 2.86 5.8 6.4.93-4.63 4.5 1.09 6.37L12 17.35l-5.72 3 1.09-6.37-4.63-4.5 6.4-.93L12 2.75Z" />
               </svg>
             </div>
-            <div className="mt-5 text-5xl font-extrabold text-slate-900">{stats.average}/5</div>
-            <p className="mt-3 text-xl text-slate-600">Average Rating</p>
+            <div className="mt-4 text-4xl font-extrabold text-slate-900 sm:mt-5 sm:text-5xl">{stats.average}/5</div>
+            <p className="mt-2 text-base text-slate-600 sm:mt-3 sm:text-xl">Average Rating</p>
           </div>
 
-          <div className="rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+          <div className="rounded-3xl bg-white p-6 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-8">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 sm:h-16 sm:w-16">
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 10v9" />
                 <path d="M14 5.88 13 10h5.83a2 2 0 0 1 1.94 2.47l-1.18 4.72A2 2 0 0 1 17.65 19H7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.94-1.52L12.5 3a1.5 1.5 0 0 1 1.5 1.88Z" />
               </svg>
             </div>
-            <div className="mt-5 text-5xl font-extrabold text-slate-900">{stats.satisfaction}</div>
-            <p className="mt-3 text-xl text-slate-600">Guest Satisfaction</p>
+            <div className="mt-4 text-4xl font-extrabold text-slate-900 sm:mt-5 sm:text-5xl">{stats.satisfaction}</div>
+            <p className="mt-2 text-base text-slate-600 sm:mt-3 sm:text-xl">Guest Satisfaction</p>
           </div>
 
-          <div className="rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+          <div className="rounded-3xl bg-white p-6 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-8">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 sm:h-16 sm:w-16">
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="8" r="4" />
                 <path d="m8 14-1 7 5-3 5 3-1-7" />
               </svg>
             </div>
-            <div className="mt-5 text-5xl font-extrabold text-slate-900">#1</div>
-            <p className="mt-3 text-xl text-slate-600">Top Rated Hotel</p>
+            <div className="mt-4 text-4xl font-extrabold text-slate-900 sm:mt-5 sm:text-5xl">#1</div>
+            <p className="mt-2 text-base text-slate-600 sm:mt-3 sm:text-xl">Top Rated Hotel</p>
           </div>
 
-          <div className="rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+          <div className="rounded-3xl bg-white p-6 text-center shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-8">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 sm:h-16 sm:w-16">
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 18 10 12l4 4 6-8" />
                 <path d="M15 8h5v5" />
               </svg>
             </div>
-            <div className="mt-5 text-5xl font-extrabold text-slate-900">{stats.total}+</div>
-            <p className="mt-3 text-xl text-slate-600">Happy Guests</p>
+            <div className="mt-4 text-4xl font-extrabold text-slate-900 sm:mt-5 sm:text-5xl">{stats.total}+</div>
+            <p className="mt-2 text-base text-slate-600 sm:mt-3 sm:text-xl">Happy Guests</p>
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-14">
-        <div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-8 shadow-[0_24px_70px_rgba(15,23,42,0.1)] md:p-12">
+      <section className="px-4 pb-10 sm:px-6 sm:pb-14">
+        <div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-5 shadow-[0_24px_70px_rgba(15,23,42,0.1)] sm:p-8 md:p-12">
           {!user && (
             <div className="mb-8 rounded-2xl border border-blue-100 bg-blue-50 px-5 py-4 text-blue-700">
               Login to submit your rating with your registered name.
@@ -300,27 +300,27 @@ export default function Rate() {
 
           <form onSubmit={handleSubmit}>
             <div className="text-center">
-              <h2 className="text-3xl font-extrabold md:text-5xl">Overall Experience</h2>
-              <div className="mt-8">
+              <h2 className="text-2xl font-extrabold sm:text-3xl md:text-5xl">Overall Experience</h2>
+              <div className="mt-6 sm:mt-8">
                 <StarRating
                   value={ratings.overall}
                   onChange={(value) => setRatings((current) => ({ ...current, overall: value }))}
-                  size="h-12 w-12 md:h-16 md:w-16"
+                  size="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16"
                   interactive
                 />
               </div>
-              <p className="mt-5 text-2xl text-slate-600">{ratingLabels[ratings.overall] || "Choose your rating"}</p>
+              <p className="mt-4 text-lg text-slate-600 sm:mt-5 sm:text-2xl">{ratingLabels[ratings.overall] || "Choose your rating"}</p>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
               {categoryFields.map((field) => (
-                <div key={field.key} className="rounded-[1.75rem] border border-slate-200 px-5 py-6">
-                  <h3 className="text-2xl font-bold text-slate-900">{field.label}</h3>
-                  <div className="mt-8">
+                <div key={field.key} className="rounded-[1.75rem] border border-slate-200 px-4 py-5 sm:px-5 sm:py-6">
+                  <h3 className="text-xl font-bold text-slate-900 sm:text-2xl">{field.label}</h3>
+                  <div className="mt-6 sm:mt-8">
                     <StarRating
                       value={ratings[field.key]}
                       onChange={(value) => setRatings((current) => ({ ...current, [field.key]: value }))}
-                      size="h-9 w-9"
+                      size="h-7 w-7 sm:h-9 sm:w-9"
                       interactive
                     />
                   </div>
@@ -328,21 +328,21 @@ export default function Rate() {
               ))}
             </div>
 
-            <div className="mt-12">
-              <label className="block text-2xl font-bold text-slate-900">Additional Comments</label>
+            <div className="mt-10 sm:mt-12">
+              <label className="block text-xl font-bold text-slate-900 sm:text-2xl">Additional Comments</label>
               <textarea
                 value={comment}
                 onChange={(event) => setComment(event.target.value)}
                 placeholder="Tell us more about your experience..."
                 rows={6}
-                className="mt-4 w-full rounded-[1.75rem] border border-slate-200 px-5 py-4 text-lg text-slate-700 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="mt-4 w-full rounded-[1.75rem] border border-slate-200 px-4 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 sm:px-5 sm:text-lg"
               />
             </div>
 
             <button
               type="submit"
               disabled={submitting}
-              className="mt-10 w-full rounded-2xl bg-blue-600 px-6 py-4 text-2xl font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-400"
+              className="mt-8 w-full rounded-2xl bg-blue-600 px-6 py-4 text-lg font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-400 sm:mt-10 sm:text-2xl"
             >
               {submitting ? "Submitting..." : "Submit Review"}
             </button>
@@ -350,9 +350,9 @@ export default function Rate() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-4 pb-16 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-4xl font-extrabold md:text-6xl">What Our Guests Say</h2>
+          <h2 className="text-center text-3xl font-extrabold sm:text-4xl md:text-6xl">What Our Guests Say</h2>
 
           {loadingReviews ? (
             <p className="mt-10 text-center text-lg text-slate-500">Loading reviews...</p>
@@ -361,25 +361,22 @@ export default function Rate() {
           ) : (
             <div className="mt-12 grid gap-6 lg:grid-cols-2">
               {reviews.map((review) => (
-                <article
-                  key={review.id}
-                  className="rounded-[2rem] bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)]"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-600 text-2xl font-bold text-white">
+                <article key={review.id} className="rounded-[2rem] bg-white p-5 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-8">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">
                       {review.name?.charAt(0)?.toUpperCase() || "G"}
                     </div>
 
                     <div className="min-w-0">
-                      <h3 className="text-3xl font-bold text-slate-900">{review.name || "Guest"}</h3>
+                      <h3 className="text-xl font-bold text-slate-900 sm:text-3xl">{review.name || "Guest"}</h3>
                       <div className="mt-2 flex flex-wrap items-center gap-3">
-                        <StarRating value={review.overall || 0} size="h-6 w-6" />
-                        <span className="text-xl text-slate-500">{formatReviewDate(review.createdAt || review.submittedAt)}</span>
+                        <StarRating value={review.overall || 0} size="h-5 w-5 sm:h-6 sm:w-6" />
+                        <span className="text-sm text-slate-500 sm:text-xl">{formatReviewDate(review.createdAt || review.submittedAt)}</span>
                       </div>
                     </div>
                   </div>
 
-                  <p className="mt-6 text-2xl italic leading-10 text-slate-700">
+                  <p className="mt-5 text-lg italic leading-8 text-slate-700 sm:mt-6 sm:text-2xl sm:leading-10">
                     "{review.comment?.trim() || "Wonderful stay and great service."}"
                   </p>
                 </article>

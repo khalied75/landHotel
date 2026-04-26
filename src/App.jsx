@@ -5,9 +5,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ChangePassword from "./pages/ChangePassword";
 import Rate from "./pages/Rate";
+import Contact from "./pages/Contact";
 
 const Available = () => <main className="pt-24 text-center text-2xl text-gray-600">Available Rooms - Coming Soon</main>;
-const Contact = () => <main className="pt-24 text-center text-2xl text-gray-600">Contact - Coming Soon</main>;
 
 export default function App() {
   return (
